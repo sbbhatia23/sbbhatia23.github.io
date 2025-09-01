@@ -97,10 +97,27 @@
     text-transform: uppercase;
 }
 
+/* === PORTFOLIO GRID === */
+.portfolio-section {
+    padding: 80px 10%;
+    background-color: black;
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 /* Grid layout for project boxes */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: min-content; /* allows row height to adjust automatically */
     gap: 30px;
     justify-content: center;
 }
@@ -114,19 +131,23 @@
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Hover effect */
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.7);
 }
 
-/* Project images */
-.project-card img {
+/* Media inside the card */
+.project-card img,
+.project-card video {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto; /* maintain natural aspect ratio */
     display: block;
+    object-fit: cover;
 }
 
 /* Overlay effect */
@@ -144,6 +165,7 @@
     transition: opacity 0.3s ease;
 }
 
+/* Show overlay on hover */
 .project-card:hover .project-overlay {
     opacity: 1;
 }
@@ -154,7 +176,10 @@
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
+    text-align: center;
+    padding: 0 10px;
 }
+
 
         </style>
     </head>
@@ -216,30 +241,6 @@
         </a>
     </div>
 </section>
-
-         <img src="final light.png" width="100%"></img>
-         <div style="border:solid blue 3px; text-align: center;">Luminescence Peaks Through</div>
-         <p>“Luminecence Peaks Through” created through the use of Blender in 2024, a 3D graphics building software, incorporates aspects of marine life, specifically the flowing, drape of Jellyfish tentacles and the bioluminescence of numerous marine organisms. This light installation contains orbs of light hidden within twisting sheets of metal, built within Blender. Bioluminescence is the process of organisms to produce light through chemical reactions within the body and is used to attract mates or prey or to fight off predators. Part of what creates an interest in the patterns of light that jellyfish emit is the diversity in patterns and additionally the way shadows play a role in their appearance. When light is covered or hidden in shadows, a different tone/feeling is evoked and especially when movement of the tentacles is involved. This was conveyed in the piece as different bulbs are seen at different angles/point of views and additionally differing colors are depicted. If built/printed, the bulbs of the light could be made of LEDs that allow for the color to be controlled and changed to depict diversity of colors. In this project, an initial sculpture of a jellyfish was created based on the inspiration of the Sea Nettle Jellyfish from the Monterey Aquarium. The materials of the tentacles and the bell were then experimented with to create a transparent/illuminated look. This was translated into a functional light structure with three bulbs of differing colors and shadows depicted.</p>
-        <hr>
-
-       <video autoplay loop muted>
-            <source src="inspo.mov" type="video/mp4">
-        </video>
-        <div style="border:solid blue 3px; text-align: center;">Inspiration of Monterey</div>
-        <p>Jellyfish hold a sense of peace and whimsy at the same time, they truly are an inspiration for the beauty and art found in nature. These specific jellyfish are Sea Nettle Jellies from the Monterey Bay Aquarium. The flow of the tentacles, the way they interact with the environment and eachother, the nonchalance in their movement. Everything comes together as they move around and a whole world is made simply by the beauty of their movement.</p>
-  <hr>
-
- <video autoplay loop muted>
-            <source src="life (online-video-cutter.com).mp4" width-100% type="video/mp4">
-        </video>
-  <div style="border:solid blue 3px; text-align:center;">Lopsided Wish</div>
-  <p>“Lopsided Wish” is a sketch made in p5.js Web Editor using Javascript during the Web Narratives class at UCSB. This sketch depicts multiple evenly-spaced circles oscillating at different speeds and orientations across a background of spirals in differing gradients. The theme of this sketch was one of the overwhelmingness of College at times. Some of the circles oscillate at the same time, in tune one would say, while others are off. Additionally some circles are moving slower than others in their oscillation. This could be perceived in many different ways and based on a person's own perception/experience of College. One take on this is that at times it is easy to slip into the comparing mindset, where one looks to their mutuals/colleagues and compares their progress/work rather than staying focused. This could create negative emotions as people may be ahead of you or behind you in their journey. This is depicted by the off oscillations that don’t completely align as they could be perceived as ‘falling behind’ their peers/counterparts. However, the circles could also be seen as aligned at one moment per oscillation, depicting how everyone does end up where they need to be and each journey is their own. Although the design itself is simplistic, in terms of college and the ideas of falling behind, the design has a deeper outlook and perspective based on the viewer.</p>
-<hr>
-
-  <img src="Final Album.jpg" width="100%"></img>
-  <div style="border:solid blue 3px; text-align:center;">Coin Album Cover</div>
-  <p>This photography project takes inspiration from the Album “How Will You Know if You Never Try” by Coin, specifically the song “Talk too Much”. This song contains a very upbeat sound and is continued throughout the album. It always reminded me of Summer and part of my childhood summers were spent exploring different candy shops. The album cover was taken on a Digital Sony Camera and edited in Adobe Photoshop and Lightroom to create a panoramic wrapping album cover with the same figure peering at the shelves. Three photos were taken to get the final photos and were then overlaid and the figures cut out and layered to create the wrapping look of the cover. The lighting was then brightened and made warmer to create a buzz on the light emitted from the colorful sodas and to convey a tone of nostalgia and warmth. This was the first step into the collaboration of physical to digital art that I took. Created in 2022, the piece displays the use of editing software to alter the look of the images.</p>
-
 
 </body>
 </html>
