@@ -81,6 +81,30 @@
             .mydiv{
                 
             }
+            .portfolio-buttons {
+    text-align: center;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio-button {
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+    text-transform: uppercase;
+}
+
+.portfolio-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
             /* === PORTFOLIO GRID === */
 .portfolio-section {
     padding: 80px 10%;
@@ -198,7 +222,12 @@
             <div class="overlay"></div>
             <div class="hero-content">
                 <h1>Sarita Bhatia</h1>
-                <p>Art • Code • Design</p>
+               <div class="portfolio-buttons">
+    <a href="art.html" class="portfolio-button">Art</a>
+    <a href="code.html" class="portfolio-button">Code</a>
+    <a href="design.html" class="portfolio-button">Design</a>
+</div>
+
             </div>
         </header>
 <section class="portfolio-section">
