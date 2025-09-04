@@ -21,17 +21,16 @@
 
 /* ====== BACKGROUND VIDEO ====== */
 .bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensures it fills the screen without distortion */
-    z-index: -1; /* Push behind text */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-color: black;
 }
+
 
 /* ====== LANDING CONTENT ====== */
 .landing-content {
