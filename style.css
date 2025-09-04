@@ -1,14 +1,15 @@
-/* === LANDING VIDEO BACKGROUND === */
+/* ====== LANDING SECTION ====== */
 #landing {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; /* Force full-screen height */
     width: 100%;
-    overflow: hidden; /* Prevent scrollbars from video overflow */
+    overflow: hidden; /* Hide overflow so video doesn't scroll */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* ====== BACKGROUND VIDEO ====== */
 .bg-video {
     position: absolute;
     top: 50%;
@@ -17,17 +18,17 @@
     min-height: 100%;
     width: auto;
     height: auto;
-    object-fit: cover; /* Ensures full-bleed coverage */
     transform: translate(-50%, -50%);
-    z-index: -1; /* Sends video behind content */
-    filter: brightness(0.6); /* Optional: make overlay darker */
+    object-fit: cover; /* Ensures it fills the screen without distortion */
+    z-index: -1; /* Push behind text */
 }
 
+/* ====== LANDING CONTENT ====== */
 .landing-content {
     position: relative;
+    z-index: 1; /* Make sure text stays above video */
     text-align: center;
-    color: #fff;
-    z-index: 1; /* Ensure text stays above video */
+    color: white;
 }
 
 .landing-title {
@@ -48,6 +49,7 @@
     cursor: pointer;
 }
 
+/* Bouncing arrow animation */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(8px); }
