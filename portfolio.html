@@ -8,19 +8,20 @@
 </head>
 <body>
     <!-- Landing Section with Background Video -->
-    <section id="landing">
-        <video autoplay muted loop playsinline class="bg-video">
-            <source src="assets/inspo.mov" type="video/mp4" />
-            Your browser does not support HTML5 video.
-        </video>
-        <div class="landing-content">
-            <h1 class="landing-title">Sarita Bhatia</h1>
-            <p class="landing-subtitle">Art • Code • Design</p>
-            <div class="scroll-down">
-                <span>&#8595;</span>
-            </div>
+  <section id="landing">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="assets/inspo.mov" type="video/mp4" />
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="landing-content">
+        <h1 class="landing-title">Sarita Bhatia</h1>
+        <p class="landing-subtitle">Art • Code • Design</p>
+        <div class="scroll-down">
+            <span>&#8595;</span>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- About Section -->
     <section id="about">
@@ -45,14 +46,14 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
         <p>© 2025 Sarita Bhatia. All rights reserved.</p>
     </footer>
-</body>
-</html>
+    <script>
+        
+document.querySelector('.scroll-down').addEventListener('click', () => {
+    document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+});
+</script>
 
-        <p>© 2025 Sarita Bhatia. All rights reserved.</p>
-    </footer>
 </body>
 </html>
