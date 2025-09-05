@@ -126,48 +126,70 @@
             60% { transform: translateX(-50%) translateY(-5px); }
         }
 
-        /* === ABOUT SECTION === */
-        .about-section {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 0;
-        }
+       /* About section video background */
+.about-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+    overflow: hidden;
+}
 
-        .about-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 80px;
-            color: white;
-        }
+.about-bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
 
-        .about-item {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            margin-bottom: 100px;
-        }
+/* Text container */
+.about-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+    border-radius: 15px;
+    padding: 50px;
+    color: black;
+}
 
-        .about-item.reverse {
-            flex-direction: row-reverse;
-        }
+/* Keep previous styles inside about-content */
+.about-content h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
 
-        .about-item .text {
-            flex: 1;
-            font-size: 1.2rem;
-        }
+.about-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
 
-        .about-item .image {
-            flex: 1;
-            position: sticky;
-            top: 100px; /* Sticky image effect */
-        }
+.about-item.reverse {
+    flex-direction: row-reverse;
+}
 
-        .about-item .image img {
-            width: 100%;
-            border-radius: 15px;
-            object-fit: cover;
-        }
+.about-item .text {
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+.about-item .image {
+    flex: 1;
+}
+
+.about-item .image img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
 
         /* === PORTFOLIO GRID === */
         .portfolio-section {
@@ -258,14 +280,18 @@
         <!-- Scroll Arrow -->
         <a href="#about" class="scroll-arrow">&#x2193;</a>
     </header>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="about-section">
+<section id="about" class="about-section">
+    <!-- Background video -->
+    <video autoplay muted loop playsinline class="about-bg-video">
+        <source src="assets/jellyfish.mp4" type="video/mp4">
+    </video>
+<!--About section-->
+    <!-- Semi-transparent text container -->
+    <div class="about-content">
         <h2>About</h2>
         <div class="about-item">
             <div class="text" data-aos="fade-up">
-               This portfolio depicts pieces of digital media made by Sarita Bhatia, a rising third year student at the University of California, Santa Barbara. The pieces of this portfolio are each from a unique background, through digital 3D web design from the Blender software, Javascript code from p5.js editor or from a photography project and the use of Adobe Photoshop and Lightroom. Outside of web media, Sarita utilizes physical art styles, such as textile work, crochet/knitting, drawing and watercolor. The classes within the Media Arts and Design Minor at UCSB has widened the mediums with which this artist works and allows for more exploration into the technology and digital design realm and allowed for the building of knowledge on coding and animation and the intersection of design and web development. Outside of the mediums, inspiration for many projects comes from the questions of perspectives and how one's current emotions can influence how they perceive the world. Additionally, the beauty and makeup of marine animals, specifically jellyfish, is a source of inspiration for many pieces, both digitally and physically. A future work in progress comes from a mix of both digital and physical mediums, where the cells that are studied with the major of Biochemistry are depicted through the use of sewing textiles and then digitally edited to allow for movement to be seen. This idea comes from the artists main interest in Microbiology and the study of cells.
-            </div>
+ This portfolio depicts pieces of digital media made by Sarita Bhatia, a rising third year student at the University of California, Santa Barbara. The pieces of this portfolio are each from a unique background, through digital 3D web design from the Blender software, Javascript code from p5.js editor or from a photography project and the use of Adobe Photoshop and Lightroom. Outside of web media, Sarita utilizes physical art styles, such as textile work, crochet/knitting, drawing and watercolor. The classes within the Media Arts and Design Minor at UCSB has widened the mediums with which this artist works and allows for more exploration into the technology and digital design realm and allowed for the building of knowledge on coding and animation and the intersection of design and web development. Outside of the mediums, inspiration for many projects comes from the questions of perspectives and how one's current emotions can influence how they perceive the world. Additionally, the beauty and makeup of marine animals, specifically jellyfish, is a source of inspiration for many pieces, both digitally and physically. A future work in progress comes from a mix of both digital and physical mediums, where the cells that are studied with the major of Biochemistry are depicted through the use of sewing textiles and then digitally edited to allow for movement to be seen. This idea comes from the artists main interest in Microbiology and the study of cells.            </div>
             <div class="image" data-aos="fade-up">
                 <img src="assets/about1.jpg" alt="Sarita working">
             </div>
@@ -278,9 +304,10 @@
                 <img src="assets/about2.jpg" alt="Climbing">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Add your portfolio section below as before -->
+  
 
     <!-- AOS Library and JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
