@@ -1,19 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Art Projects</title>
+    <meta charset="UTF-8" />
+    <title>Design Projects</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Reuse main CSS -->
     <style>
-        body { background: black; color: white; font-family: Arial, sans-serif; margin: 0; }
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 50px; }
+        body {
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid #444;
+        }
+
+        .back-btn:hover {
+            background: #ff7eb3;
+            border-color: #ff7eb3;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 50px;
+            justify-content: center;
+        }
+
+        .project-card {
+            position: relative;
+            background-color: #111;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.7);
+        }
+
         .project-card img,
-        .project-card video { width: 100%; height: auto; border-radius: 12px; }
+        .project-card video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay p {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <h1 style="text-align:center; margin-top: 40px;">Art Projects</h1>
-             <div class="project-card">
-            <img src="assets/final light.png" alt="Luminescence Peaks Through">
+    <header>
+        <h1>Design Projects</h1>
+        <a href="../portfolio.html" class="back-btn">← Back</a>
+    </header>
+
+    <div class="portfolio-grid">
+        <div class="project-card">
+            <img src="../assets/final light.png" alt="Jellyfish Light">
+            <div class="project-overlay">
+                <p>Jellyfish Light</p>
+            </div>
         </div>
         <!-- Add more art projects here -->
     </div>
