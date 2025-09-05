@@ -1,13 +1,16 @@
 /* ====== LANDING SECTION ====== */
 #landing {
     position: relative;
-    height: 100vh; /* Force full-screen height */
+    height: 100vh;
     width: 100%;
-    overflow: hidden; /* Hide overflow so video doesn't scroll */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+
+/* Dark overlay for better contrast */
 #landing::before {
     content: "";
     position: absolute;
@@ -15,45 +18,73 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.35); /* Adjust opacity */
+    background: rgba(0, 0, 0, 0.3);
     z-index: 0;
 }
 
 /* ====== BACKGROUND VIDEO ====== */
 .bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: -1;
-    background-color: black;
 }
-
 
 /* ====== LANDING CONTENT ====== */
 .landing-content {
     position: relative;
-    z-index: 1; /* Make sure text stays above video */
+    z-index: 1;
     text-align: center;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Title Styling */
 .landing-title {
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: 800;
     letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
 }
 
-.landing-subtitle {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
+/* ====== BUTTON STYLING ====== */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
+.landing-btn {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.landing-btn:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ====== SCROLL DOWN INDICATOR ====== */
 .scroll-down {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 2rem;
+    color: #fff;
     animation: bounce 1.5s infinite;
     cursor: pointer;
 }
@@ -63,28 +94,3 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(8px); }
 }
-
-
-/* === BACK & FORTH NAVIGATION === */
-.nav-controls {
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem auto;
-    padding: 1rem 0;
-    max-width: 800px;
-    border-top: 1px solid #ccc;
-}
-
-.nav-btn {
-    background-color: #000;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background 0.2s ease;
-}
-
-.nav-btn:hover {
-    background-color: #333;
-}
-
