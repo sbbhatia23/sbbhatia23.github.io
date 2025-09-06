@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Art Projects</title>
-    <link rel="stylesheet" href="../style.css"> <!-- Reuse main CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Projects</title>
+    <link rel="stylesheet" href="../style.css" />
     <style>
         body {
             background: black;
@@ -38,75 +39,110 @@
             box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
         }
 
+        /* === PROJECT GRID === */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             padding: 50px;
             justify-content: center;
         }
 
+        /* === PROJECT CARD === */
         .project-card {
             position: relative;
-            background-color: #111;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
+            cursor: pointer;
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.7);
+            transform: translateY(-8px);
+            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.8);
         }
 
-        .project-card img,
+        /* === VIDEO PREVIEW === */
         .project-card video {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             display: block;
-            border-radius: 12px;
         }
 
+        /* === HOVER OVERLAY === */
         .project-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            opacity: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            opacity: 0;
             transition: opacity 0.3s ease;
+            padding: 20px;
+            text-align: center;
         }
 
         .project-card:hover .project-overlay {
             opacity: 1;
         }
 
+        .project-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
         .project-overlay p {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
+            font-size: 1rem;
+            color: #ccc;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Art Projects</h1>
+        <h1>Coding Projects</h1>
         <a href="../portfolio.html" class="back-btn">← Back</a>
     </header>
 
     <div class="portfolio-grid">
-        <div class="project-card">
-            <img src="../assets/Final Album.jpg" alt="Coin Album Cover">
+        <!-- Project 1 -->
+        <a href="Finalalbum.html" class="project-card">
+              <img src="../assets/Final Album.jpg" alt="Coin Cover Album Preview" class="project-image"/>
+
             <div class="project-overlay">
-                <p>Coin Album Cover</p>
+                <h3>Coin Cover Album</h3>
+                <p>A Photography Project</p>
             </div>
-        </div>
-        <!-- Add more art projects here -->
+        </a>
+
+        <!-- Project 2 -->
+        <a href="OceanGame.html" class="project-card">
+            <video autoplay loop muted playsinline>
+                <source src="../videos/oceangame-preview.mp4" type="video/mp4">
+            </video>
+            <div class="project-overlay">
+                <h3>Ocean Game</h3>
+                <p>An immersive underwater game</p>
+            </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="UIRedesign.html" class="project-card">
+            <video autoplay loop muted playsinline>
+                <source src="../videos/ui-redesign-preview.mp4" type="video/mp4">
+            </video>
+            <div class="project-overlay">
+                <h3>UI Redesign</h3>
+                <p>Reimagining interface experiences</p>
+            </div>
+        </a>
     </div>
 </body>
 </html>
