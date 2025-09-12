@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aquamarine Adventure - Interactive Game Web Design</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      background: #000;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
 
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #222;
+      color: #eee;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: 1px solid #444;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #ff7eb3;
+      border-color: #ff7eb3;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <h1>Aquamarine Adventure</h1>
+
+  <video autoplay loop muted playsinline>
+    <source src="../assets/water.mov" type="video/mov" />
+  </video>
+
+  <p>
+“Lopsided Wish” is a sketch made in p5.js Web Editor using Javascript during the Web Narratives class at UCSB. This sketch depicts multiple evenly-spaced circles oscillating at different speeds and orientations across a background of spirals in differing gradients. The theme of this sketch was one of the overwhelmingness of College at times. Some of the circles oscillate at the same time, in tune one would say, while others are off. Additionally some circles are moving slower than others in their oscillation. This could be perceived in many different ways and based on a person's own perception/experience of College. One take on this is that at times it is easy to slip into the comparing mindset, where one looks to their mutuals/colleagues and compares their progress/work rather than staying focused. This could create negative emotions as people may be ahead of you or behind you in their journey. This is depicted by the off oscillations that don’t completely align as they could be perceived as ‘falling behind’ their peers/counterparts. However, the circles could also be seen as aligned at one moment per oscillation, depicting how everyone does end up where they need to be and each journey is their own. Although the design itself is simplistic, in terms of college and the ideas of falling behind, the design has a deeper outlook and perspective based on the viewer.  </p>
+
+  <a href="code.html" class="back-btn">← Back to Coding Projects</a>
+</body>
+</html>
